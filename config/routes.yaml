@@ -1,0 +1,19 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+api_team_get_report_xml:
+  path: '/report/xml'
+  methods:  [GET]
+  defaults:
+    _controller: '\App\Controller\ReportController::xmlReport'
+    _api_resource_class: 'App\Entity\Team'
+    _api_item_operation_name: 'report_xml'
+
+api_team_get_report_json:
+  path: '/report/json'
+  methods:  [GET]
+  defaults:
+    _controller: '\App\Controller\ReportController::jsonReport'
+    _api_resource_class: 'App\Entity\Team'
+    _api_item_operation_name: 'report_json'
